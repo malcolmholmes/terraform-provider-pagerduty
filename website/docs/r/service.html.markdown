@@ -38,7 +38,7 @@ resource "pagerduty_service" "example" {
   name                    = "My Web App"
   auto_resolve_timeout    = 14400
   acknowledgement_timeout = 600
-  escalation_policy       = "${pagerduty_escalation_policy.example.id}"
+  escalation_policy       = "${data.pagerduty_escalation_policy.example.id}"
   alert_creation          = "create_incidents"
 }
 ```
